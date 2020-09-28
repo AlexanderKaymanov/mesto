@@ -9,33 +9,35 @@
 <body class="page">
     <!-- Заголовок сайта -->
     <header class="header">
-      <div class="header-logo"></div>
+      <div class="header__logo"></div>
     </header>
     <!-- Содержание страницы -->
     <main class="content">
       <!-- Секция с профилем -->
       <section class="profile">
-        <div class="avatar">
-          <img src="" alt="" class="image">
+        <div class="profile__content">
+          <img src="./images/image.jpg" alt="Фото владельца профиля" class="profile__avatar">
+          <div class="profile__info">
+            <div class="profile__text">
+              <h1 class="profile__name">Жак-Ив Кусто</h1>
+              <p class="profile__profession">Исследователь океана</p>
+            </div>
+            <button class="profile__edit-button">
+              <img src="./images/edit_button.svg" alt="Иконка редактирования">
+            </button>
+          </div>
         </div>
-        <div class="profile-info">
-          <h1 class="profile-name">
-
-          </h1>
-          <p class="profile-activity">
-
-          </p>
-          <button class="profile-edit"></button>
-        </div>
-        <button class="profile-add"></button>
+        <button class="profile__add-button">
+          <img src="./images/pluse.svg" alt="Иконка добавить">
+        </button>
       </section>
-      <!-- Секция карточек с фотографиями мест с достопримечательностями -->
+      <!-- Секция карточек с фотографиями красивых мест -->
       <section class="elements">
         <article class="element">
-          <img src="" alt="" class="mesto-image">
-          <h2 class="mesto-text"></h2>
-          <button class="button-like">
-            <img src="" alt="Картинка сердечка" class="heart">
+          <img src="" alt="" class="element__image">
+          <h2 class="element__text"></h2>
+          <button class="element__button-like">
+            <img src="" alt="Картинка сердечка" class="element__image-heart">
           </button>
         </article>
       </section>

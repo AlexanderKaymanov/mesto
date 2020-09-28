@@ -2,16 +2,27 @@
 @import url(../vendor/fonts/Inter/inter.css);
 @import url(../blocks/page/page.css);
 /* Заголовок сайта */
-
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
 /* Содержание страницы */
-
-/* Секция с названием сайта */
-
-/* Секция с фотографиями */
-
-/* Секция карточек с достопримечательностями */
-
-/* Секция c кавером железнодорожной станции */
-
+@import url(../blocks/content/content.css);
+/* Секция с профилем */
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__content/profile__content.css);
+@import url(../blocks/profile/__avatar/profile__avatar.css);
+@import url(../blocks/profile/__info/profile__info.css);
+@import url(../blocks/profile/__text/profile__text.css);
+@import url(../blocks/profile/__name/profile__name.css);
+@import url(../blocks/profile/__profession/profile__profession.css);
+@import url(../blocks/profile/__edit-button/profile__edit-button.css);
+@import url(../blocks/profile/__add-button/profile__add-button.css);
+/* Секция карточек с фотографиями красивых мест */
+@import url(../blocks/elements/elements.css);
+@import url(../blocks/element/element.css);
+@import url(../blocks/element/__image/element__image.css);
+@import url(../blocks/element/__text/element__text.css);
+@import url(../blocks/element/__button-like/element__button-like.css);
+@import url(../blocks/element/__image-heart/element__image-heart.css);
 /* Подвал страницы */
-
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
