@@ -16,6 +16,7 @@
 @import url(../blocks/profile/__profession/profile__profession.css);
 @import url(../blocks/profile/__edit-button/profile__edit-button.css);
 @import url(../blocks/profile/__add-button/profile__add-button.css);
+@import url(../blocks/profile/__add-button-image/profile__add-button-image.css);
 /* Секция карточек с фотографиями красивых мест */
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/element/element.css);

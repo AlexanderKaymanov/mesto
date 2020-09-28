@@ -1,3 +1,15 @@
 .element__button-like {
-  
+  width: 52px;
+  height: 19px;
+  border: none;
+  background: none;
+  overflow: hidden;
+  outline: none;
+  align-self: center;
+  justify-self: self-end;
+}
+
+.element__button-like:hover {
+  opacity: 0.6;
+  cursor: url(../../../images/hand.png), pointer;
 }
