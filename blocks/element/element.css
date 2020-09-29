@@ -5,3 +5,10 @@
   background: #FFFFFF;
   border-radius: 10px;
 }
+
+@media screen and (max-width: 1279px) {
+  .element {
+    max-width: 282px;
+    margin: auto;
+  }
+}

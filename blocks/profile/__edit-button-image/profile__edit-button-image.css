@@ -2,3 +2,11 @@
   width: 10px;
   height: 10px;
 }
+
+@media screen and (max-width: 1279px) {
+  .profile__edit-button-image {
+    width: 7.5px;
+    height: 7.5px;
+    margin: auto;
+  }
+}

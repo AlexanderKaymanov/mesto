@@ -2,13 +2,26 @@
   flex: none;
   width: 24px;
   height: 24px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #fff;
   box-sizing: border-box;
   background: none;
+  overflow: hidden;
+  outline: none;
   margin-top: 20px;
 }
 
 .profile__edit-button:hover {
   opacity: 0.6;
   cursor: url(../../../images/hand.png), pointer;
+}
+
+@media screen and (max-width: 1279px) {
+  .profile__edit-button {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    margin-left: 17px;
+    margin-top: 35px;
+    padding: 0;
+  }
 }

@@ -1,5 +1,15 @@
 .header__logo {
   background-image: url(../../../images/logo_whate.svg);
-  width: 142.01px;
-  height: 33.4px;
+  width: 143px;
+  height: 34px;
+}
+
+@media screen and (max-width: 1279px) {
+  .header__logo {
+    width: 100px;
+    height: 24px;
+    background-size: contain;
+    margin: 0 0 31.6px 27px;
+    opacity: 1;
+  }
 }

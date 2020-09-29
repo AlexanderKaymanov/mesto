@@ -4,3 +4,9 @@
   justify-content: center;
   margin: 0 17px 0 0;
 }
+
+@media screen and (max-width: 1279px) {
+  .profile__text {
+    margin: 0;
+  }
+}
