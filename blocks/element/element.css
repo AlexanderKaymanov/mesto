@@ -4,11 +4,11 @@
   grid-auto-rows: minmax(auto, auto) 1fr;
   background: #FFFFFF;
   border-radius: 10px;
+  margin: auto;
 }
 
 @media screen and (max-width: 1279px) {
   .element {
     max-width: 282px;
-    margin: auto;
   }
 }
