@@ -8,6 +8,7 @@
   overflow: hidden;
   outline: none;
   margin-top: 20px;
+  box-shadow: none;
 }
 
 .profile__edit-button:hover {

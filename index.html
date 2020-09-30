@@ -7,6 +7,7 @@
   <title>Mesto</title>
 </head>
 <body class="page">
+  <div class="page__container">
     <!-- Заголовок сайта -->
     <header class="header">
       <div class="header__logo"></div>
@@ -81,5 +82,18 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
+    <!-- Секция модального окна (попуп) -->
+    <section class="overlay">
+      <form action="" class="form-edit">
+        <img src="./images/close_icon.png" alt="Кнопка закрыть" class="close-image">
+        <h2 class="form-edit__title">Редактировать профиль</h2>
+        <input type="text" class="form-edit__input-name">
+        <input type="text" class="form-edit__input-profession">
+        <button class="form-edit__submit-button">Сохранить</button>
+      </form>
+    </section>
+  </div>
+  <!-- Подключаем скрипт -->
+  <script src="./scripts/index.js"></script>
 </body>
 </html>

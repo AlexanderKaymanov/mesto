@@ -1,6 +1,7 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts/Inter/inter.css);
 @import url(../blocks/page/page.css);
+@import url(../blocks/page/__container/page__container.css);
 /* Заголовок сайта */
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__logo/header__logo.css);
@@ -28,3 +29,13 @@
 /* Подвал страницы */
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
+/* Секция модального окна (попуп) */
+@import url(../blocks/overlay/overlay.css);
+@import url(../blocks/overlay/_is-opened/overlay_is-opened.css);
+@import url(../blocks/form-edit/form-edit.css);
+@import url(../blocks/form-edit/__title/form-edit__title.css);
+@import url(../blocks/form-edit/__input-name/form-edit__input-name.css);
+@import url(../blocks/form-edit/__input-profession/form-edit__input-profession.css);
+@import Url(../blocks/form-edit/__submit-button/form-edit__submit-button.css);
+@import url(../blocks/close-image/close-image.css);
+/* Подключаем скрипт */
