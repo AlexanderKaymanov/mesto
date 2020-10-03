@@ -14,7 +14,7 @@
 @import url(../blocks/profile/__info/profile__info.css);
 @import url(../blocks/profile/__text/profile__text.css);
 @import url(../blocks/profile/__name/profile__name.css);
-@import url(../blocks/profile/__profession/profile__profession.css);
+@import url(../blocks/profile/__about-yourself/profile__about-yourself.css);
 @import url(../blocks/profile/__edit-button/profile__edit-button.css);
 @import url(../blocks/profile/__edit-button-image/profile__edit-button-image.css);
 @import url(../blocks/profile/__add-button/profile__add-button.css);
@@ -35,7 +35,6 @@
 @import url(../blocks/form-edit/form-edit.css);
 @import url(../blocks/form-edit/__title/form-edit__title.css);
 @import url(../blocks/form-edit/__input-name/form-edit__input-name.css);
-@import url(../blocks/form-edit/__input-profession/form-edit__input-profession.css);
+@import url(../blocks/form-edit/__input-about-yourself/form-edit__input-about-yourself.css);
 @import Url(../blocks/form-edit/__submit-button/form-edit__submit-button.css);
 @import url(../blocks/close-image/close-image.css);
-/* Подключаем скрипт */

@@ -6,10 +6,3 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-
-/* @media screen and (max-width: 1279px) {
-  .element__image {
-    grid-column-start: 1;
-    grid-column-end: span 2;
-  }
-} */

@@ -1,21 +1,5 @@
 .page {
-  /* max-width: 1280px;
-  min-width: 320px;
-  margin: auto; */
   font-family: 'Inter', sans-serif;
   font-weight: normal;
   background: #000000;
 }
-
-/* @media screen and (max-width: 1279px) {
-  .page {
-    max-width: 320px;
-    overflow-x: hidden;
-  }
-} */
-
-/* @media screen and (min-width: 320px) {
-  .page {
-    min-width: 320px;
-  }
-} */
