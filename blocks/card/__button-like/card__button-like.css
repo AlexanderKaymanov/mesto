@@ -1,4 +1,4 @@
-.element__button-like {
+.card__button-like {
   width: 52px;
   height: 19px;
   border: none;
@@ -7,9 +7,10 @@
   outline: none;
   align-self: center;
   justify-self: self-end;
+  transition: 0.3s;
 }
 
-.element__button-like:hover {
+.card__button-like:hover {
   opacity: 0.6;
   cursor: url(../../../images/hand.png), pointer;
 }

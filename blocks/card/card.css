@@ -1,4 +1,4 @@
-.element {
+.card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: minmax(auto, auto) 1fr;
@@ -8,7 +8,7 @@
 }
 
 @media screen and (max-width: 1279px) {
-  .element {
+  .card {
     max-width: 282px;
   }
 }

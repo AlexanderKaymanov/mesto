@@ -23,57 +23,57 @@
               <h1 class="profile__name">Жак-Ив Кусто</h1>
               <p class="profile__about-yourself">Исследователь океана</p>
             </div>
-            <button class="profile__edit-button">
+            <button class="profile__edit-button" type="button">
               <img class="profile__edit-button-image" src="./images/edit_button.svg" alt="Иконка редактирования">
             </button>
           </div>
         </div>
-        <button class="profile__add-button">
+        <button class="profile__add-button" type="button">
           <img class="profile__add-button-image" src="./images/pluse.svg" alt="Иконка добавить">
         </button>
       </section>
       <!-- Секция карточек с фотографиями красивых мест -->
-      <section class="elements">
-        <article class="element">
-          <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
-          <h2 class="element__text">Карачаевск</h2>
-          <button class="element__button-like">
-            <img class="element__image-heart" src="./images/heart.svg" alt="Картинка сердечка">
+      <section class="cards">
+        <article class="card">
+          <img class="card__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
+          <h2 class="card__text">Карачаевск</h2>
+          <button class="card__button-like" type="button">
+            <img class="card__image-heart" src="./images/heart.svg" alt="Картинка сердечка">
           </button>
         </article>
-        <article class="element">
-          <img class="element__image" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус">
-          <h2 class="element__text">Гора Эльбрус</h2>
-          <button class="element__button-like">
-            <img class="element__image-heart" src="./images/heart.svg" alt="Картинка сердечка">
+        <article class="card">
+          <img class="card__image" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус">
+          <h2 class="card__text">Гора Эльбрус</h2>
+          <button class="card__button-like" type="button">
+            <img class="card__image-heart" src="./images/heart.svg" alt="Картинка сердечка">
           </button>
         </article>
-        <article class="element">
-          <img class="element__image" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай">
-          <h2 class="element__text">Домбай</h2>
-          <button class="element__button-like">
-            <img class="element__image-heart" src="./images/heart.svg" alt="Картинка сердечка">
+        <article class="card">
+          <img class="card__image" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай">
+          <h2 class="card__text">Домбай</h2>
+          <button class="card__button-like" type="button">
+            <img class="card__image-heart" src="./images/heart.svg" alt="Картинка сердечка">
           </button>
         </article>
-        <article class="element">
-          <img class="element__image" src="./images/Lake_Baikal.jpg" alt="Озеро Байкал">
-          <h2 class="element__text">Озеро Байкал</h2>
-          <button class="element__button-like">
-            <img class="element__image-heart" src="./images/heart.svg" alt="Картинка сердечка">
+        <article class="card">
+          <img class="card__image" src="./images/Lake_Baikal.jpg" alt="Озеро Байкал">
+          <h2 class="card__text">Озеро Байкал</h2>
+          <button class="card__button-like" type="button">
+            <img class="card__image-heart" src="./images/heart.svg" alt="Картинка сердечка">
           </button>
         </article>
-        <article class="element">
-          <img class="element__image" src="./images/Altai_Krai_Russia.jpg" alt="Алтай">
-          <h2 class="element__text">Алтай</h2>
-          <button class="element__button-like">
-            <img class="element__image-heart" src="./images/heart.svg" alt="Картинка сердечка">
+        <article class="card">
+          <img class="card__image" src="./images/Altai_Krai_Russia.jpg" alt="Алтай">
+          <h2 class="card__text">Алтай</h2>
+          <button class="card__button-like" type="button">
+            <img class="card__image-heart" src="./images/heart.svg" alt="Картинка сердечка">
           </button>
         </article>
-        <article class="element">
-          <img class="element__image" src="./images/Krasnoyarskiy_region_Russia.jpg" alt="Красноярский регион">
-          <h2 class="element__text">Красноярский регион</h2>
-          <button class="element__button-like">
-            <img class="element__image-heart" src="./images/heart.svg" alt="Картинка сердечка">
+        <article class="card">
+          <img class="card__image" src="./images/Krasnoyarskiy_region_Russia.jpg" alt="Красноярский регион">
+          <h2 class="card__text">Красноярский регион</h2>
+          <button class="card__button-like" type="button">
+            <img class="card__image-heart" src="./images/heart.svg" alt="Картинка сердечка">
           </button>
         </article>
       </section>
@@ -84,11 +84,13 @@
     </footer>
     <!-- Секция модального окна (попуп) -->
     <section class="overlay">
-      <form class="form-edit">
-        <img src="./images/close_icon.png" alt="Кнопка закрыть" class="close-image">
+      <form class="form-edit" name="formedit">
+        <button class="form-edit__close-button" type="button">
+          <img src="./images/close_icon.svg" alt="Кнопка закрыть" class="form-edit__close-image">
+        </button>
         <h2 class="form-edit__title">Редактировать профиль</h2>
-        <input type="text" class="form-edit__input-name">
-        <input type="text" class="form-edit__input-about-yourself">
+        <input type="text" class="form-edit__input form-edit__input_name" name="inputname">
+        <input type="text" class="form-edit__input form-edit__input_about-yourself" name="inputaboutyourself">
         <button class="form-edit__submit-button" type="submit">Сохранить</button>
       </form>
     </section>

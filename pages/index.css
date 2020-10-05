@@ -1,40 +1,42 @@
-@import url(../vendor/normalize.css);
-@import url(../vendor/fonts/Inter/inter.css);
-@import url(../blocks/page/page.css);
-@import url(../blocks/page/__container/page__container.css);
+@import url('../vendor/normalize.css');
+@import url('../vendor/fonts/Inter/inter.css');
+@import url('../blocks/page/page.css');
+@import url('../blocks/page/__container/page__container.css');
 /* Заголовок сайта */
-@import url(../blocks/header/header.css);
-@import url(../blocks/header/__logo/header__logo.css);
+@import url('../blocks/header/header.css');
+@import url('../blocks/header/__logo/header__logo.css');
 /* Содержание страницы */
-@import url(../blocks/content/content.css);
+@import url('../blocks/content/content.css');
 /* Секция с профилем */
-@import url(../blocks/profile/profile.css);
-@import url(../blocks/profile/__content/profile__content.css);
-@import url(../blocks/profile/__avatar/profile__avatar.css);
-@import url(../blocks/profile/__info/profile__info.css);
-@import url(../blocks/profile/__text/profile__text.css);
-@import url(../blocks/profile/__name/profile__name.css);
-@import url(../blocks/profile/__about-yourself/profile__about-yourself.css);
-@import url(../blocks/profile/__edit-button/profile__edit-button.css);
-@import url(../blocks/profile/__edit-button-image/profile__edit-button-image.css);
-@import url(../blocks/profile/__add-button/profile__add-button.css);
-@import url(../blocks/profile/__add-button-image/profile__add-button-image.css);
+@import url('../blocks/profile/profile.css');
+@import url('../blocks/profile/__content/profile__content.css');
+@import url('../blocks/profile/__avatar/profile__avatar.css');
+@import url('../blocks/profile/__info/profile__info.css');
+@import url('../blocks/profile/__text/profile__text.css');
+@import url('../blocks/profile/__name/profile__name.css');
+@import url('../blocks/profile/__about-yourself/profile__about-yourself.css');
+@import url('../blocks/profile/__edit-button/profile__edit-button.css');
+@import url('../blocks/profile/__edit-button-image/profile__edit-button-image.css');
+@import url('../blocks/profile/__add-button/profile__add-button.css');
+@import url('../blocks/profile/__add-button-image/profile__add-button-image.css');
 /* Секция карточек с фотографиями красивых мест */
-@import url(../blocks/elements/elements.css);
-@import url(../blocks/element/element.css);
-@import url(../blocks/element/__image/element__image.css);
-@import url(../blocks/element/__text/element__text.css);
-@import url(../blocks/element/__button-like/element__button-like.css);
-@import url(../blocks/element/__image-heart/element__image-heart.css);
+@import url('../blocks/cards/cards.css');
+@import url('../blocks/card/card.css');
+@import url('../blocks/card/__image/card__image.css');
+@import url('../blocks/card/__text/card__text.css');
+@import url('../blocks/card/__button-like/card__button-like.css');
+@import url('../blocks/card/__image-heart/card__image-heart.css');
 /* Подвал страницы */
-@import url(../blocks/footer/footer.css);
-@import url(../blocks/footer/__copyright/footer__copyright.css);
+@import url('../blocks/footer/footer.css');
+@import url('../blocks/footer/__copyright/footer__copyright.css');
 /* Секция модального окна (попуп) */
-@import url(../blocks/overlay/overlay.css);
-@import url(../blocks/overlay/_is-opened/overlay_is-opened.css);
-@import url(../blocks/form-edit/form-edit.css);
-@import url(../blocks/form-edit/__title/form-edit__title.css);
-@import url(../blocks/form-edit/__input-name/form-edit__input-name.css);
-@import url(../blocks/form-edit/__input-about-yourself/form-edit__input-about-yourself.css);
-@import Url(../blocks/form-edit/__submit-button/form-edit__submit-button.css);
-@import url(../blocks/close-image/close-image.css);
+@import url('../blocks/overlay/overlay.css');
+@import url('../blocks/overlay/_is-opened/overlay_is-opened.css');
+@import url('../blocks/form-edit/form-edit.css');
+@import url('../blocks/form-edit/__close-button/form-edit__close-button.css');
+@import url('../blocks/form-edit/__close-image/form-edit__close-image.css');
+@import url('../blocks/form-edit/__title/form-edit__title.css');
+@import url('../blocks/form-edit/__input/form-edit__input.css');
+@import url('../blocks/form-edit/__input/_name/form-edit__input_name.css');
+@import url('../blocks/form-edit/__input/_about-yourself/form-edit__input_about-yourself.css');
+@import Url('../blocks/form-edit/__submit-button/form-edit__submit-button.css');

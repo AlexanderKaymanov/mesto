@@ -1,4 +1,4 @@
-.form-edit__input-name {
+.form-edit__input {
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
@@ -12,13 +12,12 @@
   outline-style: none;
   padding: 0;
   margin-left: 36px;
-  margin-top: 46px;
+  margin-top: 30px;
 }
 
 @media screen and (max-width: 1279px) {
-  .form-edit__input-name {
+  .form-edit__input {
     width: 238px;
     margin-left: 22px;
-    margin-top: 67px;
   }
 }
