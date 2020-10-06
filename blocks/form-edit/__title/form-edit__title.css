@@ -9,10 +9,10 @@
 
 @media screen and (max-width: 1279px) {
   .form-edit__title {
-    min-width: 320px;
+    min-width: 238px;
     font-size: 18px;
     line-height: 22px;
     padding-top: 25px;
-    margin: 0 0 43px 22px;
+    margin: 0 22px 43px 22px;
   }
 }
