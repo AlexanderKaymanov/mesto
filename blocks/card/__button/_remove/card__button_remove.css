@@ -1,0 +1,12 @@
+.card__button_remove {
+  width: 18px;
+  height: 19.3px;
+  background: url('/images/remove.svg') center no-repeat;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  align-self: start;
+  margin-right: 15px;
+  margin-top: 18px;
+  padding: 0;
+  z-index: 0;
+}

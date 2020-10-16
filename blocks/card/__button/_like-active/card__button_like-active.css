@@ -1,0 +1,4 @@
+.card__button_like-active {
+  opacity: 1;
+  background: url('/images/black_heart.svg') center no-repeat;
+}
