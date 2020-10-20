@@ -1,0 +1,8 @@
+@media screen and (max-width: 1279px) {
+  .popup__input_title {
+    width: 200px;
+    margin-left: 20px;
+    margin-top: 0;
+    color: #C4C4C4;
+  }
+}

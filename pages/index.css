@@ -31,14 +31,30 @@
 /* Подвал страницы */
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/footer/__copyright/footer__copyright.css');
-/* Секция модального окна (попуп) */
-@import url('../blocks/overlay/overlay.css');
-@import url('../blocks/overlay/_is-opened/overlay_is-opened.css');
-@import url('../blocks/form-edit/form-edit.css');
-@import url('../blocks/form-edit/__close-button/form-edit__close-button.css');
-@import url('../blocks/form-edit/__close-image/form-edit__close-image.css');
-@import url('../blocks/form-edit/__title/form-edit__title.css');
-@import url('../blocks/form-edit/__input/form-edit__input.css');
-@import url('../blocks/form-edit/__input/_name/form-edit__input_name.css');
-@import url('../blocks/form-edit/__input/_about-yourself/form-edit__input_about-yourself.css');
-@import Url('../blocks/form-edit/__submit-button/form-edit__submit-button.css');
+/* Секции модальных окон (попап) редактирования профиля, добавления новой карточки
+   и просмотра картинки mesto */
+@import url('../blocks/popup/popup.css');
+@import url('../blocks/popup/_edit/popup_edit.css');
+@import url('../blocks/popup/_add/popup_add.css');
+@import url('../blocks/popup/_image/popup_image.css');
+@import url('../blocks/popup/__figure/popup__figure.css');
+@import url('../blocks/popup/__image/popup__image.css');
+@import url('../blocks/popup/__image-caption/popup__image-caption.css');
+@import url('../blocks/popup/_is-opened/popup_is-opened.css');
+@import url('../blocks/popup/__form/popup__form.css');
+@import url('../blocks/popup/__form/_edit/popup__form_edit.css');
+@import url('../blocks/popup/__form/_add/popup__form_add.css');
+@import url('../blocks/popup/__close-button/popup__close-button.css');
+@import url('../blocks/popup/__close-button/_add/popup__close-button_add.css');
+@import url('../blocks/popup/__close-button/_edit/popup__close-button_edit.css');
+@import url('../blocks/popup/__close-button/_image/popup__close-button_image.css');
+@import url('../blocks/popup/__close-image/popup__close-image.css');
+@import url('../blocks/popup/__title/popup__title.css');
+@import url('../blocks/popup/__title/_add/popup__title_add.css');
+@import url('../blocks/popup/__input/popup__input.css');
+@import url('../blocks/popup/__input/_name/popup__input_name.css');
+@import url('../blocks/popup/__input/_title/popup__input_title.css');
+@import url('../blocks/popup/__input/_about-yourself/popup__input_about-yourself.css');
+@import url('../blocks/popup/__input/_link/popup__input_link.css');
+@import Url('../blocks/popup/__submit-button/popup__submit-button.css');
+@import url('../blocks/popup/__submit-button/_add/popup__submit-button_add.css');

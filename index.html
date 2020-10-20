@@ -40,17 +40,39 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
-    <!-- Секция модального окна (попуп) -->
-    <section class="overlay">
-      <form class="form-edit" name="formedit">
-        <button class="form-edit__close-button" type="button">
-          <img src="./images/close_icon.svg" alt="Кнопка закрыть" class="form-edit__close-image">
+    <!-- Секция модального окна (попуп) редактирования профиля -->
+    <section class="popup popup_edit">
+      <form class="popup__form popup__form_edit" name="formedit">
+        <button class="popup__close-button popup__close-button_edit" type="button">
+          <img src="./images/close_icon.svg" alt="Кнопка закрыть" class="popup__close-image">
         </button>
-        <h2 class="form-edit__title">Редактировать профиль</h2>
-        <input type="text" class="form-edit__input form-edit__input_name" name="inputname">
-        <input type="text" class="form-edit__input form-edit__input_about-yourself" name="inputaboutyourself">
-        <button class="form-edit__submit-button" type="submit">Сохранить</button>
+        <h2 class="popup__title popup__title">Редактировать профиль</h2>
+        <input type="text" class="popup__input popup__input_name" name="inputname">
+        <input type="text" class="popup__input popup__input_about-yourself" name="inputaboutyourself">
+        <button class="popup__submit-button" type="submit">Сохранить</button>
       </form>
+    </section>
+        <!-- Секция модального окна (попуп) добавления новой карточки -->
+    <section class="popup popup_add">
+      <form class="popup__form popup__form_add" name="formadd">
+        <button class="popup__close-button popup__close-button_add" type="button">
+          <img src="./images/close_icon.svg" alt="Кнопка закрыть" class="popup__close-image">
+        </button>
+        <h2 class="popup__title popup__title_add">Новое место</h2>
+        <input type="text" class="popup__input popup__input_title" name="inputtitle" placeholder="Название">
+        <input type="text" class="popup__input popup__input_link" name="inputlink" placeholder="Ссылка на картинку">
+        <button class="popup__submit-button popup__submit-button_add" type="submit">Создать</button>
+      </form>
+    </section>
+    <!-- Секция модального окна (попуп) просмотра картинки mesto -->
+    <section class="popup popup_image">
+      <figure class="popup__figure">
+        <img class="popup__image" src="./images/Murmansk.jpg" alt="Картинка места">
+        <button class="popup__close-button popup__close-button_image" type="button">
+          <img src="./images/close_icon.svg" alt="Кнопка закрыть" class="popup__close-image">
+        </button>
+        <figcaption class="popup__image-caption"></figcaption>
+      </figure>
     </section>
   </div>
   <!-- Template карточки mesto  -->
@@ -58,7 +80,7 @@
     <article class="card">
       <button class="card__button card__button_remove" type="button">
       </button>
-      <img class="card__image" alt="Карточка места">
+      <img class="card__image" src="./images/Krasnoyarskiy_region_Russia.jpg" alt="Карточка места">
       <h2 class="card__text"></h2>
       <button class="card__button card__button_like" type="button">
       </button>
