@@ -7,7 +7,7 @@ const buttonOpenPopupEdit = document.querySelector('.profile__edit-button');
 const buttonOpenPopupAdd = document.querySelector('.profile__add-button');
 const buttonClosePopupEdit = popupEditProfile.querySelector('.popup__close-button_edit');
 const buttonClosePopupAdd = popupAddCard.querySelector('.popup__close-button_add');
-const buttonCreatCardAdd = popupAddCard.querySelector('.popup__submit-button_add');
+const buttonCreateCardAdd = popupAddCard.querySelector('.popup__submit-button_add');
 
 const formElementEdit = popup.querySelector('.popup__form_edit');
 const profileName = document.querySelector('.profile__name');
@@ -24,8 +24,8 @@ const handlePopupToggle = (popup) => {
 const handleEditProfile = () => {
   handlePopupToggle(popupEditProfile);
   if (popup.classList.contains('popup_is-opened')) {
-      nameInput.value = profileName.textContent;
-      jobInput.value = profileAboutYourself.textContent;
+    nameInput.value = profileName.textContent;
+    jobInput.value = profileAboutYourself.textContent;
   }
 };
 
@@ -123,8 +123,8 @@ const renderCard = () => {
 };
 
 // Обработчик добавления новой карточки mesto
-const handleFormCreatNewCard = () => {
-  buttonCreatCardAdd.addEventListener('click', (event) => {
+const handleFormCreateNewCard = () => {
+  buttonCreateCardAdd.addEventListener('click', (event) => {
     event.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
     const item = getItem({
       name: titleInput.value,
@@ -143,7 +143,7 @@ const handleOpenPopupAdd = () => {
 };
 
 renderCard();
-handleFormCreatNewCard();
+handleFormCreateNewCard();
 
 buttonOpenPopupAdd.addEventListener('click', handleOpenPopupAdd);
 buttonClosePopupAdd.addEventListener('click', handleOpenPopupAdd);
