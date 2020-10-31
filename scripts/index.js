@@ -2,6 +2,7 @@ const popup = document.querySelector('.popup');
 const popupEditProfile = document.querySelector('.popup_edit');
 const popupAddCard = document.querySelector('.popup_add');
 const popupImageCard = document.querySelector('.popup_image');
+const popupSubmitButton = popup.querySelector('.popup__submit-button');
 const popupNameImage = popupImageCard.querySelector('.popup__image-caption');
 const buttonOpenPopupEdit = document.querySelector('.profile__edit-button');
 const buttonOpenPopupAdd = document.querySelector('.profile__add-button');
@@ -10,6 +11,7 @@ const buttonClosePopupAdd = popupAddCard.querySelector('.popup__close-button_add
 const buttonCreateCardAdd = popupAddCard.querySelector('.popup__submit-button_add');
 
 const formElementEdit = popup.querySelector('.popup__form_edit');
+const formPopupAdd = document.querySelector('.popup__form_add');
 const profileName = document.querySelector('.profile__name');
 const profileAboutYourself = document.querySelector('.profile__about-yourself');
 const nameInput = popupEditProfile.querySelector('.popup__input_name');
@@ -26,6 +28,16 @@ const handleEditProfile = () => {
   if (popup.classList.contains('popup_is-opened')) {
     nameInput.value = profileName.textContent;
     jobInput.value = profileAboutYourself.textContent;
+    if (formElementEdit.checkValidity()) {
+      const inputs = Array.from(formElementEdit.querySelectorAll('.popup__input'));
+      inputs.forEach(input => {
+        input.classList.remove('popup__input_type_error');
+        document.querySelector(`#${input.id}-error`).textContent = '';
+
+      });
+      popupSubmitButton.disabled = false;
+      popupSubmitButton.classList.remove('popup__submit-button_inactive');
+    }
   }
 };
 
@@ -124,8 +136,7 @@ const renderCard = () => {
 
 // Обработчик добавления новой карточки mesto
 const handleFormCreateNewCard = () => {
-  buttonCreateCardAdd.addEventListener('click', (event) => {
-    event.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
+  buttonCreateCardAdd.addEventListener('click', () => {
     const item = getItem({
       name: titleInput.value,
       link: linkInput.value
@@ -140,6 +151,10 @@ const handleFormCreateNewCard = () => {
 // Обработчик открытия и закрытия модального окна (попапа) добавления новой карточки mesto.
 const handleOpenPopupAdd = () => {
   handlePopupToggle(popupAddCard);
+  if (!formPopupAdd.checkValidity()) {
+    buttonCreateCardAdd.disabled = true;
+    buttonCreateCardAdd.classList.add('popup__submit-button_inactive');
+  }
 };
 
 renderCard();
@@ -149,10 +164,30 @@ buttonOpenPopupAdd.addEventListener('click', handleOpenPopupAdd);
 buttonClosePopupAdd.addEventListener('click', handleOpenPopupAdd);
 
 // Обработчик закрытия модального окна (попапа) просмотра картинки
-const buttonClosePopupImage = document.querySelector('.popup__close-button_image'); // popup__close-button_image
+const buttonClosePopupImage = document.querySelector('.popup__close-button_image');
 
 const handleCloseCardImage = () => {
   handlePopupToggle(popupImageCard);
 };
 
 buttonClosePopupImage.addEventListener('click', handleCloseCardImage);
+
+// -------------------------------------------------------------------------------
+
+// Обработчики закрытия попапа по клику на свободном поле и по нажатию клавиши Esc
+const closePopup = (activePopup) => {
+  if (activePopup) {
+    activePopup.classList.remove('popup_is-opened');
+  }
+};
+
+const onClickPopupBackground = (event) => {
+  const activePopup = document.querySelector('.popup_is-opened');
+  if(event.target === event.currentTarget || event.keyCode === 27) {
+    closePopup(activePopup);
+  }
+};
+popupEditProfile.addEventListener('click', onClickPopupBackground);
+popupAddCard.addEventListener('click', onClickPopupBackground);
+popupImageCard.addEventListener('click', onClickPopupBackground);
+document.addEventListener('keydown', onClickPopupBackground);

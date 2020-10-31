@@ -42,26 +42,30 @@
     </footer>
     <!-- Секция модального окна (попуп) редактирования профиля -->
     <section class="popup popup_edit">
-      <form class="popup__form popup__form_edit" name="formedit">
+      <form class="popup__form popup__form_edit" name="form-edit" novalidate>
         <button class="popup__close-button popup__close-button_edit" type="button">
           <img src="./images/close_icon.svg" alt="Кнопка закрыть" class="popup__close-image">
         </button>
         <h2 class="popup__title popup__title">Редактировать профиль</h2>
-        <input type="text" class="popup__input popup__input_name" name="inputname">
-        <input type="text" class="popup__input popup__input_about-yourself" name="inputaboutyourself">
-        <button class="popup__submit-button" type="submit">Сохранить</button>
+        <input id="input-name" autocomplete="off" type="text" class="popup__input popup__input_name" name="name" minlength="2" maxlength="40" required placeholder="Имя">
+        <span id="input-name-error" class="error"></span>
+        <input id="input-about-yourself" autocomplete="off" type="text" class="popup__input popup__input_about-yourself" name="about-yourself" minlength="2" maxlength="200" required placeholder="О себе">
+        <span id="input-about-yourself-error" class="error"></span>
+        <button type="submit" class="popup__submit-button">Сохранить</button>
       </form>
     </section>
         <!-- Секция модального окна (попуп) добавления новой карточки -->
     <section class="popup popup_add">
-      <form class="popup__form popup__form_add" name="formadd">
+      <form class="popup__form popup__form_add" name="form-add" novalidate>
         <button class="popup__close-button popup__close-button_add" type="button">
           <img src="./images/close_icon.svg" alt="Кнопка закрыть" class="popup__close-image">
         </button>
         <h2 class="popup__title popup__title_add">Новое место</h2>
-        <input type="text" class="popup__input popup__input_title" name="inputtitle" placeholder="Название">
-        <input type="text" class="popup__input popup__input_link" name="inputlink" placeholder="Ссылка на картинку">
-        <button class="popup__submit-button popup__submit-button_add" type="submit">Создать</button>
+        <input id="input-title" autocomplete="off" type="text" class="popup__input popup__input_title" name="title" minlength="2" maxlength="30" required placeholder="Название">
+        <span id="input-title-error" class="error"></span>
+        <input id="input-link" autocomplete="off" type="url" class="popup__input popup__input_link" name="link" required placeholder="Ссылка на картинку">
+        <span id="input-link-error" class="error"></span>
+        <button type="submit" class="popup__submit-button popup__submit-button_add">Создать</button>
       </form>
     </section>
     <!-- Секция модального окна (попуп) просмотра картинки mesto -->
@@ -88,5 +92,6 @@
   </template>
   <!-- Подключаем скрипт -->
   <script src="./scripts/index.js"></script>
+  <script src="./scripts/validate.js"></script>
 </body>
 </html>
