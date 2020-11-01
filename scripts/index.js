@@ -20,6 +20,10 @@ const jobInput = popupEditProfile.querySelector('.popup__input_about-yourself');
 // Обработчик открытия и закрытия модального окна (попапа).
 const handlePopupToggle = (popup) => {
   popup.classList.toggle('popup_is-opened');
+  const activePopup = document.querySelector('.popup_is-opened');
+  if (activePopup) {
+    document.addEventListener('keydown', onClickEsc);
+  }
 };
 
 // Обработчик редактирования профиля
@@ -179,7 +183,6 @@ const closePopup = (activePopup) => {
   if (activePopup) {
     document.removeEventListener('keydown', onClickEsc);
     activePopup.classList.remove('popup_is-opened');
-    document.addEventListener('keydown', onClickEsc); // вызываем обработчик на нажатие клавиши Esc
   }
 };
 
@@ -200,4 +203,3 @@ const onClickEsc = (event) => {
 popupEditProfile.addEventListener('click', onClickPopupBackground);
 popupAddCard.addEventListener('click', onClickPopupBackground);
 popupImageCard.addEventListener('click', onClickPopupBackground);
-document.addEventListener('keydown', onClickEsc);
