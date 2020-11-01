@@ -177,17 +177,27 @@ buttonClosePopupImage.addEventListener('click', handleCloseCardImage);
 // Обработчики закрытия попапа по клику на свободном поле и по нажатию клавиши Esc
 const closePopup = (activePopup) => {
   if (activePopup) {
+    document.removeEventListener('keydown', onClickEsc);
     activePopup.classList.remove('popup_is-opened');
+    document.addEventListener('keydown', onClickEsc); // вызываем обработчик на нажатие клавиши Esc
   }
 };
 
 const onClickPopupBackground = (event) => {
   const activePopup = document.querySelector('.popup_is-opened');
-  if(event.target === event.currentTarget || event.keyCode === 27) {
+  if(event.target === event.currentTarget) {
     closePopup(activePopup);
   }
 };
+
+const onClickEsc = (event) => {
+  const activePopup = document.querySelector('.popup_is-opened');
+    if(event.keyCode === 27) {
+      closePopup(activePopup);
+    }
+};
+
 popupEditProfile.addEventListener('click', onClickPopupBackground);
 popupAddCard.addEventListener('click', onClickPopupBackground);
 popupImageCard.addEventListener('click', onClickPopupBackground);
-document.addEventListener('keydown', onClickPopupBackground);
+document.addEventListener('keydown', onClickEsc);
