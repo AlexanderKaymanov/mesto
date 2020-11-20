@@ -30,6 +30,7 @@ export class FormValidator {
 
   // Метод изменения состояния кнопки
   _toggleButtonState(buttonSubmit, isActive) {
+    this._disableButtonSubmit();
     if (isActive) {
       buttonSubmit.disabled = false;
       buttonSubmit.classList.remove(this._settings.inactiveButtonClass);
@@ -40,27 +41,34 @@ export class FormValidator {
   }
 
   // Метод слушателя событий полей input и кнопок submit
-  _setEventListeners(buttonElement) {
+  _setEventListeners() {
     const inputs = Array.from(this._formElement);
+    this._buttonElement = this._formElement.querySelector(this._settings.submitButtonSelector);
     inputs.forEach(input => {
       input.addEventListener('input', (evt) => {
-      this._checkInputValidity(evt.target);
+        this._checkInputValidity(evt.target);
 
-      // меняем состояние кнопки отправки в зависимости от валидности всех инпутов
-      const isAllValid = this._formElement.checkValidity();
-      this._toggleButtonState(buttonElement, isAllValid);
+        // меняем состояние кнопки отправки в зависимости от валидности всех инпутов
+        const isAllValid = this._formElement.checkValidity();
+        this._toggleButtonState(this._buttonElement, isAllValid);
+      });
     });
-  });
+  }
+
+  // Метод отключения кнопки submit после сохранения формы
+  _disableButtonSubmit() {
+    this._buttonElement.disabled = true;
+    this._buttonElement.classList.add(this._settings.inactiveButtonClass);
   }
 
   // Метод валидации форм
   enableValidation() {
-    this._formElement.addEventListener('submit', (evt) => {
-      evt.preventDefault();
+    this._formElement.addEventListener('submit', (event) => {
+      event.preventDefault();
+      this._disableButtonSubmit();
     });
 
-    const buttonElement = this._formElement.querySelector(this._settings.submitButtonSelector);
-    this._setEventListeners(buttonElement);
-    this._toggleButtonState(buttonElement, this._formElement.checkValidity());
+    this._setEventListeners(this._buttonElement);
+    this._toggleButtonState(this._buttonElement, this._formElement.checkValidity());
   }
 }

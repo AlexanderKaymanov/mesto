@@ -2,7 +2,7 @@ export class Card {
   constructor(data, templateSelector) {
     this._name = data.name;
     this._link = data.link;
-    this._template = document.querySelector(templateSelector).content;
+    this._template = document.querySelector(templateSelector).content.querySelector('.card');
   }
 
   _remove(event) {
@@ -13,22 +13,24 @@ export class Card {
     event.target.classList.toggle('card__button_like-active');
   }
 
-  _handleOpenCardImage() {
-    this._image = document.querySelector('.popup_image');
-    this._image.querySelector('.popup__image-caption').textContent = this._name;
-    this._image.querySelector('.popup__image').src = this._link;
-    this._image.classList.toggle('popup_is-opened');
+  render() {
+    this._content = this._template.cloneNode(true);
+    const cardImage  = this._content.querySelector('.card__image');
+    const cardText = this._content.querySelector('.card__text');
+
+    cardText.textContent = this._name;
+    cardImage.src = this._link;
+    this._setEventListeners();
+
+    return this._content;
   }
 
-  render(cards) {
-    this._content = this._template.cloneNode(true);
+  _setEventListeners() {
+    const cardImage  = this._content.querySelector('.card__image');
+    const cardButtonRemove = this._content.querySelector('.card__button_remove');
+    const cardButtonLike = this._content.querySelector('.card__button_like')
 
-    this._content.querySelector('.card__text').textContent = this._name;
-    this._content.querySelector('.card__image').src = this._link;
-    this._content.querySelector('.card__button_remove').addEventListener('click', this._remove.bind(this));
-    this._content.querySelector('.card__button_like').addEventListener('click', this._like.bind(this));
-    this._content.querySelector('.card__image').addEventListener('click', this._handleOpenCardImage.bind(this));
-
-    cards.prepend(this._content);
+    cardButtonRemove.addEventListener('click', (event) => this._remove(event));
+    cardButtonLike.addEventListener('click', (event) => this._like(event));
   }
 }
