@@ -26,7 +26,6 @@ export class Card {
   }
 
   _setEventListeners() {
-    const cardImage  = this._content.querySelector('.card__image');
     const cardButtonRemove = this._content.querySelector('.card__button_remove');
     const cardButtonLike = this._content.querySelector('.card__button_like')
 

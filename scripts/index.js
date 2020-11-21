@@ -56,18 +56,13 @@ const initialCards = [
 // Обработчик открытия модального окна (попапа).
 const handleOpenPopup = (popup) => {
   popup.classList.add('popup_is-opened');
-  const activePopup = document.querySelector('.popup_is-opened');
-  if (activePopup) {
-    document.addEventListener('keydown', onClickEsc);
-  }
+  document.addEventListener('keydown', onClickEsc);
 };
 
 // Обработчик закрытия модального окна (попапа).
 const handleClosePopup = (activePopup) => {
-  if (activePopup) {
     document.removeEventListener('keydown', onClickEsc);
     activePopup.classList.remove('popup_is-opened');
-  }
 }
 
 // Обработчик редактирования профиля
@@ -84,21 +79,6 @@ function handleFormSubmit(event) {
   profileAboutYourself.textContent = jobInput.value;
   handleClosePopup(popupEditProfile);
 }
-
-// Обработчик кнопки закрытия модального окна (попапа) редактирования профиля
-const handleCloseEditProfile = () => {
-  handleClosePopup(popupEditProfile);
-};
-
-// Обработчик кнопки закрытия модального окна (попапа) просмотра картинки
-const handleCloseCardImage = () => {
-  handleClosePopup(popupImageCard);
-};
-
-// Обработчик кнопки закрытия попапа добавления картинки mesto
-const handleCloseCardAdd = () => {
-  handleClosePopup(popupAddCard);
-};
 
 // Обработчики закрытия попапа по клику на свободном поле
 const onClickPopupBackground = (event) => {
@@ -133,9 +113,9 @@ forms.forEach(formElement => {
 formElementEdit.addEventListener('submit', handleFormSubmit);
 buttonOpenPopupEdit.addEventListener('click', handleEditProfile);
 
-buttonClosePopupEdit.addEventListener('click', handleCloseEditProfile);
-buttonClosePopupAdd.addEventListener('click', handleCloseCardAdd);
-buttonClosePopupImage.addEventListener('click', handleCloseCardImage);
+buttonClosePopupEdit.addEventListener('click', () => handleClosePopup(popupEditProfile));
+buttonClosePopupAdd.addEventListener('click', () => handleClosePopup(popupAddCard));
+buttonClosePopupImage.addEventListener('click', () => handleClosePopup(popupImageCard));
 
 popupEditProfile.addEventListener('click', onClickPopupBackground);
 popupAddCard.addEventListener('click', onClickPopupBackground);
@@ -180,12 +160,7 @@ function handleFormCreateNewCard(event) {
   handleClosePopup(popupAddCard);
 };
 
-// Обработчик открытия модального окна (попапа) добавления новой карточки mesto.
-const handleOpenPopupAdd = () => {
-  handleOpenPopup(popupAddCard);
-};
-
 visualizeCards();
 
 formPopupAdd.addEventListener('submit', handleFormCreateNewCard);
-buttonOpenPopupAdd.addEventListener('click', handleOpenPopupAdd);
+buttonOpenPopupAdd.addEventListener('click', () => handleOpenPopup(popupAddCard));
