@@ -20,7 +20,7 @@ import {
   forms,
   initialCards
 } from '../utils/constants.js';
-import '../pages/index.css';
+  import '../pages/index.css';
 
 // ---------------------------------------------------------
 
@@ -109,7 +109,10 @@ const formCreateNewCard = new PopupWithForm({
       renderer: (item) => {
         const card = new Card({
           data: item,
-          handleCardClick: () => {}
+          handleCardClick: () => {
+            const cardImage = new PopupWithImage(popupImageCard);
+          cardImage.open(item);
+          }
         }, '.template');
         const cardElement = card.render();
         itemCard.addCard(cardElement);
