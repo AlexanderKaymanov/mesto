@@ -20,7 +20,7 @@ import {
   forms,
   initialCards
 } from '../utils/constants.js';
-// import '../pages/index.css';  <=  Для сборки проекта в Webpack
+import '../pages/index.css';
 
 // ---------------------------------------------------------
 

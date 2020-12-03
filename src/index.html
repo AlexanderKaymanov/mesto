@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Комментируется при сборке проекта в Webpack -->
-  <link rel="stylesheet" href="./pages/index.css">
+  <!-- <link rel="stylesheet" href="./pages/index.css"> -->
   <!-- Комментируется при сборке проекта в Webpack -->
-  <script type="module" src="./pages/index.js"></script>
+  <!-- <script type="module" src="./pages/index.js"></script> -->
   <title>Mesto</title>
 </head>
 <body class="page">
@@ -20,22 +20,22 @@
       <!-- Секция с профилем -->
       <section class="profile">
         <div class="profile__content">
-          <!-- <img class="profile__avatar" src="<%=require('./images/image.jpg')%>" alt="Фото владельца профиля"> <=  Для сборки проекта в Webpack -->
-          <img class="profile__avatar" src="./images/image.jpg" alt="Фото владельца профиля">
+          <img class="profile__avatar" src="<%=require('./images/image.jpg')%>" alt="Фото владельца профиля">
+          <!-- <img class="profile__avatar" src="./images/image.jpg" alt="Фото владельца профиля"> -->
           <div class="profile__info">
             <div class="profile__text">
               <h1 class="profile__name">Жак-Ив Кусто</h1>
               <p class="profile__about-yourself">Исследователь океана</p>
             </div>
             <button class="profile__edit-button" type="button">
-              <!-- <img class="profile__edit-button-image" src="<%=require('./images/edit_button.svg')%>" alt="Иконка редактирования"> <=  Для сборки проекта в Webpack -->
-              <img class="profile__edit-button-image" src="./images/edit_button.svg" alt="Иконка редактирования">
+              <img class="profile__edit-button-image" src="<%=require('./images/edit_button.svg')%>" alt="Иконка редактирования">
+              <!-- <img class="profile__edit-button-image" src="./images/edit_button.svg" alt="Иконка редактирования"> -->
             </button>
           </div>
         </div>
         <button class="profile__add-button" type="button">
-          <!-- <img class="profile__add-button-image" src="<%=require('./images/pluse.svg')%>" alt="Иконка добавить"> <=  Для сборки проекта в Webpack -->
-          <img class="profile__add-button-image" src="./images/pluse.svg" alt="Иконка добавить">
+          <img class="profile__add-button-image" src="<%=require('./images/pluse.svg')%>" alt="Иконка добавить">
+          <!-- <img class="profile__add-button-image" src="./images/pluse.svg" alt="Иконка добавить"> -->
         </button>
       </section>
       <!-- Секция карточек с фотографиями красивых мест -->
@@ -50,8 +50,8 @@
     <section class="popup popup_edit">
       <form class="popup__form popup__form_edit" name="form-edit" novalidate>
         <button class="popup__close-button popup__close-button_edit" type="button">
-          <!-- <img class="popup__close-image" src="<%=require('./images/close_icon.svg')%>" alt="Кнопка закрыть"> <=  Для сборки проекта в Webpack -->
-          <img src="./images/close_icon.svg" alt="Кнопка закрыть" class="popup__close-image">
+          <img class="popup__close-image" src="<%=require('./images/close_icon.svg')%>" alt="Кнопка закрыть">
+          <!-- <img src="./images/close_icon.svg" alt="Кнопка закрыть" class="popup__close-image"> -->
         </button>
         <h2 class="popup__title popup__title">Редактировать профиль</h2>
         <input id="input-name" autocomplete="off" type="text" class="popup__input popup__input_name" name="name" minlength="2" maxlength="40" required placeholder="Имя">
@@ -65,8 +65,8 @@
     <section class="popup popup_add">
       <form class="popup__form popup__form_add" name="form-add" novalidate>
         <button class="popup__close-button popup__close-button_add" type="button">
-          <!-- <img class="popup__close-image" src="<%=require('./images/close_icon.svg')%>" alt="Кнопка закрыть"> <=  Для сборки проекта в Webpack -->
-          <img src="./images/close_icon.svg" alt="Кнопка закрыть" class="popup__close-image">
+          <img class="popup__close-image" src="<%=require('./images/close_icon.svg')%>" alt="Кнопка закрыть">
+          <!-- <img src="./images/close_icon.svg" alt="Кнопка закрыть" class="popup__close-image"> -->
         </button>
         <h2 class="popup__title popup__title_add">Новое место</h2>
         <input id="input-title" autocomplete="off" type="text" class="popup__input popup__input_title" name="title" minlength="2" maxlength="30" required placeholder="Название">
@@ -79,11 +79,11 @@
     <!-- Секция модального окна (попуп) просмотра картинки mesto -->
     <section class="popup popup_image">
       <figure class="popup__figure">
-        <!-- <img class="popup__image" src="<%=require('./images/Murmansk.jpg')%>" alt="Картинка места"> <=  Для сборки проекта в Webpack -->
-        <img class="popup__image" src="./images/Murmansk.jpg" alt="Картинка места">
+        <img class="popup__image" src="<%=require('./images/Murmansk.jpg')%>" alt="Картинка места">
+        <!-- <img class="popup__image" src="./images/Murmansk.jpg" alt="Картинка места"> -->
         <button class="popup__close-button popup__close-button_image" type="button">
-          <!-- <img class="popup__close-image" src="<%=require('./images/close_icon.svg')%>" alt="Кнопка закрыть"> <=  Для сборки проекта в Webpack -->
-          <img src="./images/close_icon.svg" alt="Кнопка закрыть" class="popup__close-image">
+          <img class="popup__close-image" src="<%=require('./images/close_icon.svg')%>" alt="Кнопка закрыть">
+          <!-- <img src="./images/close_icon.svg" alt="Кнопка закрыть" class="popup__close-image"> -->
         </button>
         <figcaption class="popup__image-caption"></figcaption>
       </figure>
@@ -94,8 +94,8 @@
     <article class="card">
       <button class="card__button card__button_remove" type="button">
       </button>
-      <!-- <img class="card__image" src="<%=require('./images/Krasnoyarskiy_region_Russia.jpg')%>" alt="Карточка места"> <=  Для сборки проекта в Webpack -->
-      <img class="card__image" src="./images/Krasnoyarskiy_region_Russia.jpg" alt="Карточка места">
+      <img class="card__image" src="<%=require('./images/Krasnoyarskiy_region_Russia.jpg')%>" alt="Карточка места">
+      <!-- <img class="card__image" src="./images/Krasnoyarskiy_region_Russia.jpg" alt="Карточка места"> -->
       <h2 class="card__text"></h2>
       <button class="card__button card__button_like" type="button">
       </button>
