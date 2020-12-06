@@ -15,12 +15,6 @@ export class Section {
     this._container.prepend(element);
   }
 
-  // Метод, отвечающий за отрисовку одной карточки
-  renderItem() {
-    const item = this._renderedItems;
-    this._renderer(item);
-  }
-
   // Метод, отвечающий за отрисовку всех элементов
   renderItems() {
     this._renderedItems.forEach(item => {

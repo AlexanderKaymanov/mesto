@@ -29,22 +29,22 @@ export class FormValidator {
   }
 
   // Метод изменения состояния кнопки
-  _toggleButtonState(buttonSubmit, isActive) {
+  _toggleButtonState(_buttonElement, isActive) {
     this._disableButtonSubmit();
     if (isActive) {
-      buttonSubmit.disabled = false;
-      buttonSubmit.classList.remove(this._settings.inactiveButtonClass);
+      this._buttonElement.disabled = false;
+      this._buttonElement.classList.remove(this._settings.inactiveButtonClass);
     } else {
-      buttonSubmit.disabled = true;
-      buttonSubmit.classList.add(this._settings.inactiveButtonClass);
+      this._buttonElement.disabled = true;
+      this._buttonElement.classList.add(this._settings.inactiveButtonClass);
     }
   }
 
   // Метод слушателя событий полей input и кнопок submit
   _setEventListeners() {
-    const inputs = Array.from(this._formElement);
+    this._inputs = Array.from(this._formElement.querySelectorAll(this._settings.inputSelector));
     this._buttonElement = this._formElement.querySelector(this._settings.submitButtonSelector);
-    inputs.forEach(input => {
+    this._inputs.forEach(input => {
       input.addEventListener('input', (evt) => {
         this._checkInputValidity(evt.target);
 

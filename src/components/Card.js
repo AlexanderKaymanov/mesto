@@ -1,6 +1,6 @@
 export class Card {
   constructor({ data, handleCardClick }, templateSelector) {
-    this._name = data.name;
+    this._title = data.title;
     this._link = data.link;
     this._handleCardClick = handleCardClick;
     this._template = document.querySelector(templateSelector).content.querySelector('.card');
@@ -19,7 +19,7 @@ export class Card {
     const cardImage  = this._content.querySelector('.card__image');
     const cardText = this._content.querySelector('.card__text');
 
-    cardText.textContent = this._name;
+    cardText.textContent = this._title;
     cardImage.src = this._link;
     this._setEventListeners();
 
@@ -30,7 +30,7 @@ export class Card {
     const cardButtonRemove = this._content.querySelector('.card__button_remove');
     const cardButtonLike = this._content.querySelector('.card__button_like');
     const cardImage  = this._content.querySelector('.card__image');
-    
+
     cardButtonRemove.addEventListener('click', (event) => this._remove(event));
     cardButtonLike.addEventListener('click', (event) => this._like(event));
     cardImage.addEventListener('click', () => this._handleCardClick());
