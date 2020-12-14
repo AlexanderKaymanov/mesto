@@ -1,0 +1,15 @@
+.profile__avatar-edit {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  opacity: 1;
+  padding: 47px 47px;
+}
+
+.profile__avatar-edit:hover  {
+  opacity: 0;
+  cursor: url(../../../images/hand.png), pointer;
+  transition: 0.3s;
+}

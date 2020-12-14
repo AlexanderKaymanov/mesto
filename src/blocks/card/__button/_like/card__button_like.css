@@ -1,5 +1,8 @@
 .card__button_like {
   width: 52px;
   height: 19px;
+  grid-row: 3/3;
+  grid-column: 2/2;
+  margin-bottom: 10px;
   background: url('../../../../images/heart.svg') center no-repeat;
 }

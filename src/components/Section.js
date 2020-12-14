@@ -17,8 +17,8 @@ export class Section {
 
   // Метод, отвечающий за отрисовку всех элементов
   renderItems() {
-    this._renderedItems.forEach(item => {
-      this._renderer(item);
+    this._renderedItems.splice(5, 6).forEach(item => {
+      this._renderer({ name: item.name, link: item.link, likes: item.likes});
     });
   }
 }

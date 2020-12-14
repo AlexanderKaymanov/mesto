@@ -3,7 +3,7 @@ import { KEY_CODE_ESC } from '../utils/constants.js'
 export class Popup {
   constructor(popupElement) {
     this._popupElement = popupElement;
-    this._element = popupElement.querySelector('.popup__close-button');
+    this._element = this._popupElement.querySelector('.popup__close-button');
     this._handleEscClose = this._handleEscClose.bind(this);
   }
 
