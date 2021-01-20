@@ -15,7 +15,7 @@
   .profile__about-yourself {
     font-size: 14px;
     line-height: 17px;
-    text-align: end;
+    text-align: start;
     padding-top: 0;
     max-width: 248px;
   }

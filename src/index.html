@@ -12,6 +12,8 @@
     <header class="header">
       <div class="header__logo"></div>
     </header>
+    <!-- Спиннер -->
+    <div class="spinner"></div>
     <!-- Содержание страницы -->
     <main class="content">
       <!-- Секция с профилем -->
@@ -19,12 +21,12 @@
         <div class="profile__content">
           <button class="profile__avatar-conteiner">
             <img class="profile__avatar-edit" src="<%=require('./images/pen.svg')%>" alt="Иконка редактирования">
-            <img class="profile__avatar" src="<%=require('./images/image.jpg')%>" alt="Фото владельца профиля">
+            <img class="profile__avatar" src="https://avatars.mds.yandex.net/get-yapic/25817/CUm1a0JIIMUmcTKXLSDP214LXjw-1/islands-300" alt="Фото владельца профиля">
           </button>
           <div class="profile__info">
             <div class="profile__text">
-              <h1 class="profile__name">Жак-Ив Кусто</h1>
-              <p class="profile__about-yourself">Исследователь океана</p>
+              <h1 class="profile__name">Александр Кайманов</h1>
+              <p class="profile__about-yourself">Студент Яндекс.Практикума</p>
             </div>
             <button class="profile__edit-button" type="button">
               <img class="profile__edit-button-image" src="<%=require('./images/edit_button.svg')%>" alt="Иконка редактирования">
@@ -64,7 +66,7 @@
           <img class="popup__close-image" src="<%=require('./images/close_icon.svg')%>" alt="Кнопка закрыть">
         </button>
         <h2 class="popup__title popup__title_add">Новое место</h2>
-        <input id="input-title" autocomplete="off" type="text" class="popup__input popup__input_title" name="title" minlength="2" maxlength="30" required placeholder="Название">
+        <input id="input-title" autocomplete="off" type="text" class="popup__input popup__input_title" name="name" minlength="2" maxlength="30" required placeholder="Название">
         <span id="input-title-error" class="error"></span>
         <input id="input-link" autocomplete="off" type="url" class="popup__input popup__input_link" name="link" required placeholder="Ссылка на картинку">
         <span id="input-link-error" class="error"></span>
@@ -78,12 +80,12 @@
           <img class="popup__close-image" src="<%=require('./images/close_icon.svg')%>" alt="Кнопка закрыть">
         </button>
         <h2 class="popup__title popup__title_avatar">Обновить аватар</h2>
-        <input id="input-link" autocomplete="off" type="url" class="popup__input popup__input_avatar" name="avatar" required placeholder="Ссылка на аватар">
-        <span id="input-link-error" class="error"></span>
+        <input id="input-avatar" autocomplete="off" type="url" class="popup__input popup__input_avatar" name="avatar" required placeholder="Ссылка на аватар">
+        <span id="input-avatar-error" class="error"></span>
         <button type="submit" class="popup__submit-button popup__submit-button_avatar">Сохранить</button>
       </form>
     </section>
-    <!-- Секция модального окна (попуп) удаления картинки -->
+    <!-- Секция модального окна (попуп) подтверждения удаления картинки -->
     <section class="popup popup_deleting-image">
       <form class="popup__form popup__form_deleting-image" name="form-deleting-image" novalidate>
         <button class="popup__close-button popup__close-button_deleting-image" type="button">

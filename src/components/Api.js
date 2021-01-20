@@ -38,13 +38,14 @@ export class Api {
     });
   }
 
-  updateInfoUser(nameUser, aboutUser) {
-    return fetch(`${userUrl}`, {
+  updateInfoUser(data) {
+    console.log(data);
+    return fetch(`${this._userUrl}`, {
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
-        name: nameUser,
-        about: aboutUser
+        name: data.name,
+        about: data.about
         })
     },)
 
@@ -56,12 +57,13 @@ export class Api {
     });
   }
 
-  updateAvatar(avatarUser) {
+  updateAvatar(data) {
+    console.log(data);
     return fetch(`${this._avatarUrl}`, {
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
-        avatar: avatarUser,
+        avatar: data.avatar
         })
     },)
 
@@ -73,13 +75,13 @@ export class Api {
     });
   }
 
-  addCard(nameCard, linkCard) {
+  addCard(data) {
     return fetch(`${this._cardsUrl}`, {
       method: 'POST',
       headers: this._headers,
       body: JSON.stringify({
-        name: nameCard,
-        link: linkCard
+        name: data.name,
+        link: data.link
         })
     },)
 
@@ -92,7 +94,7 @@ export class Api {
   }
 
   deleteCard(сardId) {
-    return fetch(`${this._cardsUrl}${сardId}`, {
+    return fetch(`${this._cardsUrl}/${сardId}`, {
       method: 'DELETE',
       headers: this._headers
     })
@@ -136,4 +138,8 @@ export class Api {
   getAllNeededData() {
     return Promise.all([this.getInfoUser(), this.getInitialCards()]);
   }
+
+  // updateAllNeededData() {
+  //   return Promise.all([this.updateInfoUser, this.updateAvatar]);
+  // }
 }

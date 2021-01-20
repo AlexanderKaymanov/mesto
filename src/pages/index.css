@@ -6,8 +6,12 @@
 /* Заголовок сайта */
 @import url('../blocks/header/header.css');
 @import url('../blocks/header/__logo/header__logo.css');
+/* Спайннер */
+@import url('../blocks/spinner/spinner.css');
+@import url('../blocks/spinner/_visible/spinner_visible.css');
 /* Содержание страницы */
 @import url('../blocks/content/content.css');
+@import url('../blocks/content/_hidden/content_hidden.css');
 /* Секция с профилем */
 @import url('../blocks/profile/profile.css');
 @import url('../blocks/profile/__content/profile__content.css');
@@ -28,6 +32,7 @@
 @import url('../blocks/card/__image/card__image.css');
 @import url('../blocks/card/__button/card__button.css');
 @import url('../blocks/card/__button/_remove/card__button_remove.css');
+@import url('../blocks/card/__button/_hidden/card__button_hidden.css');
 @import url('../blocks/card/__text/card__text.css');
 @import url('../blocks/card/__button/_like/card__button_like.css');
 @import url('../blocks/card/__button/_like-active/card__button_like-active.css');
