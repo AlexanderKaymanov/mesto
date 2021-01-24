@@ -3,38 +3,31 @@ export class Card {
     this._name = data.name;
     this._link = data.link;
     this._likes = data.likes;
+    this._owner = data.owner;
     this._handleCardClick = handleCardClick;
     this._handleDeleteClick = handleDeleteClick;
     this._handleLikeClick = handleLikeClick;
-
     this._template = document.querySelector(templateSelector).content.querySelector('.card');
     this._content = this._template.cloneNode(true);
-    // this._cardButtonRemove = this._template.querySelector('.card__button_remove');
   }
 
-  remove(event) {
-    console.log('Класс Card remove');
-    event.target.closest('.card').remove();
+  addLike(element) {
+    this._element = element;
+    const cardLikes = this._element.querySelector('.card__likes');
+    this._element.querySelector('.card__button_like').classList.add('card__button_like-active');
+    cardLikes.textContent = this._likes.length + 1;
   }
 
-  _like(event) {
-    event.target.classList.toggle('card__button_like-active');
+  deleteLike(element) {
+    this._element = element;
+    const cardLikes = this._element.querySelector('.card__likes');
+    this._element.querySelector('.card__button_like').classList.remove('card__button_like-active');
+    cardLikes.textContent = this._likes.length - 1;
   }
 
   deleteCard(element) {
     this._element = element;
     this._element.remove();
-    console.log('Карточка удалена из разметки');
-  }
-
-  renderCard() {
-    const cardImage  = this._content.querySelector('.card__image');
-    const cardText = this._content.querySelector('.card__text');
-
-    cardText.textContent = this._name;
-    cardImage.src = this._link;
-    this.setEventListeners();
-    return this._content;
   }
 
   render() {
@@ -55,7 +48,7 @@ export class Card {
     const cardImage  = this._content.querySelector('.card__image');
 
     buttonRemove.addEventListener('click', () => this._handleDeleteClick());
-    cardButtonLike.addEventListener('click', (event) => this._like(event));
+    cardButtonLike.addEventListener('click', () => this._handleLikeClick());
     cardImage.addEventListener('click', () => this._handleCardClick());
   }
 }

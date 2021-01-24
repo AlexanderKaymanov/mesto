@@ -5,6 +5,7 @@ export class Section {
     this._renderer = renderer;
     this._container = containerSelector;
     this._card = document.querySelector('.template').content.querySelector('.card__button_remove');
+    this._cardLike = document.querySelector('.template').content.querySelector('.card__button_like');
     this._removeCard = document.querySelector('.template').content.querySelector('.card');
   }
 
@@ -23,25 +24,34 @@ export class Section {
     console.log(element);
     this._element = element;
     this._element.remove();
-    console.log('Карточка удалена из разметки');
   }
 
   // Метод, отвечающий за отрисовку одной карточки
   renderItem(item) {
     this._card.classList.remove('card__button_hidden');
-    console.log(item);
+    this._cardLike.classList.remove('card__button_like-active');
     this._renderer({ name: item.name, link: item.link, likes: item.likes, owner: item.owner, _id: item._id });
   }
 
   // Метод, отвечающий за отрисовку всех карточек
   renderItems(userId) {
     this._renderedItems.map(item => {
+      const likesId = item.likes.map((item) => (item._id));
+
       if (userId !== item.owner) {
         this._card.classList.add('card__button_hidden');
       } else {
         this._card.classList.remove('card__button_hidden');
       }
+
+      this._cardLike.classList.remove('card__button_like-active');
+      likesId.forEach((item) => {
+        if (userId === item) {
+          this._cardLike.classList.add('card__button_like-active');
+        }
+      });
+
       this._renderer({ name: item.name, link: item.link, likes: item.likes, owner: item.owner, _id: item._id });
     });
-  };
+  }
 }

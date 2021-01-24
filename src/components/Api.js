@@ -108,7 +108,7 @@ export class Api {
   }
 
   likeCard(сardId) {
-    return fetch(`${this._likesCardUrl}${сardId}`, {
+    return fetch(`${this._likesCardUrl}/${сardId}`, {
       method: 'PUT',
       headers: this._headers
     })
@@ -122,7 +122,7 @@ export class Api {
   }
 
   deleteLikeCard(сardId) {
-    return fetch(`${this._likesCardUrl}${сardId}`, {
+    return fetch(`${this._likesCardUrl}/${сardId}`, {
       method: 'DELETE',
       headers: this._headers
     })
@@ -138,8 +138,4 @@ export class Api {
   getAllNeededData() {
     return Promise.all([this.getInfoUser(), this.getInitialCards()]);
   }
-
-  // updateAllNeededData() {
-  //   return Promise.all([this.updateInfoUser, this.updateAvatar]);
-  // }
 }
