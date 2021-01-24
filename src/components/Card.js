@@ -11,18 +11,23 @@ export class Card {
     this._content = this._template.cloneNode(true);
   }
 
+  updateLikes(cardLike) {
+    this.cardLikes = cardLike;
+    return this.cardLikes;
+  }
+
   addLike(element) {
     this._element = element;
     const cardLikes = this._element.querySelector('.card__likes');
     this._element.querySelector('.card__button_like').classList.add('card__button_like-active');
-    cardLikes.textContent = this._likes.length + 1;
+    cardLikes.textContent = this.cardLikes;
   }
 
   deleteLike(element) {
     this._element = element;
     const cardLikes = this._element.querySelector('.card__likes');
     this._element.querySelector('.card__button_like').classList.remove('card__button_like-active');
-    cardLikes.textContent = this._likes.length - 1;
+    cardLikes.textContent = this.cardLikes;
   }
 
   deleteCard(element) {

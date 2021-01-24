@@ -7,8 +7,16 @@
     "build": "webpack --mode production",
     "dev": "webpack serve"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderKaymanov/mesto.git"
+  },
   "author": "Alexander Kaymanov",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexanderKaymanov/mesto/issues"
+  },
+  "homepage": "https://github.com/AlexanderKaymanov/mesto#readme",
   "dependencies": {
     "core-js": "^3.8.3",
     "lodash": "^4.17.20",

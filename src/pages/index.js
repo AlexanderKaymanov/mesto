@@ -90,44 +90,55 @@ api.getAllNeededData().then(argument => {
         },
         handleLikeClick: () => {
           const cardId = item._id;
-          const cardLikes = item.likes;
-          const likesId = cardLikes.map((item) => (item._id));
+          const cardLikesItem = item.likes;
+          const likesId = cardLikesItem.map((item) => (item._id));
           const cardElement = card.render();
           // Постановка лайка на карточку
           const putCardLike = () => {
             api.likeCard(cardId)
-            .then(() => {
-              card.addLike(cardElement, cardLikes);
+            .then((res) => {
+              const cardLike = res.likes.length;
+              card.updateLikes(cardLike);
+              card.addLike(cardElement);
             })
             .catch((err) => {
               console.log(`Ошибка: ${err}`);
             })
             .finally(() => {
+              location.reload();
             })
           };
           // Удаление лайка с карточки
           const deleteCardLike = () => {
             api.deleteLikeCard(cardId)
-            .then(() => {
+            .then((res) => {
+              const cardLike = res.likes.length;
+              card.updateLikes(cardLike);
               card.deleteLike(cardElement);
             })
             .catch((err) => {
               console.log(`Ошибка: ${err}`);
             })
             .finally(() => {
+              location.reload();
             })
           };
           // Условия при, которых ставится или удаляется лайк
+          let userCheck = true;
           if (likesId.length === 0) {
             putCardLike();
-          }
-          likesId.forEach((item) => {
-            if (userId === item) {
-              deleteCardLike();
-            } else {
+            userCheck = false;
+          } else {
+            likesId.forEach((item) => {
+              if (userId === item) {
+                deleteCardLike();
+                userCheck = false;
+              }
+            });
+            if (userCheck) {
               putCardLike();
             }
-          });
+          }
         }
       }, '.template');
       const cardElement = card.render();
