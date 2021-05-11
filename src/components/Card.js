@@ -43,11 +43,11 @@ export class Card {
     cardText.textContent = this._name;
     cardImage.src = this._link;
     cardLikes.textContent = this._likes.length;
-    this.setEventListeners();
+    this._setEventListeners();
     return this._content;
   }
 
-  setEventListeners() {
+  _setEventListeners() {
     const buttonRemove = this._content.querySelector('.card__button_remove');
     const cardButtonLike = this._content.querySelector('.card__button_like');
     const cardImage  = this._content.querySelector('.card__image');

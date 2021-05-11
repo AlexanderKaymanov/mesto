@@ -32,7 +32,7 @@ import {
 } from '../utils/constants.js';
 
 // ---------------------------------------------------------
-const userInfo = new UserInfo(profileName, profileAboutYourself);
+const userInfo = new UserInfo(profileName, profileAboutYourself, profileAvatar);
 const cardImage = new PopupWithImage(popupImageCard);
 
 const api = new Api({
